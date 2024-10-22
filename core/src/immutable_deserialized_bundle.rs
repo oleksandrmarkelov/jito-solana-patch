@@ -6,10 +6,7 @@ use {
     solana_perf::sigverify::verify_packet,
     solana_runtime::bank::Bank,
     solana_sdk::{
-        bundle::SanitizedBundle,
-        clock::{Slot, MAX_PROCESSING_AGE},
-        pubkey::Pubkey,
-        signature::Signature,
+        bundle::SanitizedBundle, clock::MAX_PROCESSING_AGE, pubkey::Pubkey, signature::Signature,
         transaction::SanitizedTransaction,
     },
     solana_svm::transaction_error_metrics::TransactionErrorMetrics,
