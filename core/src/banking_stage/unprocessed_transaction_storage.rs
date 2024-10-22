@@ -1393,7 +1393,10 @@ impl BundleStorage {
         is_slot_over
     }
 
-    /// Drains the unprocessed_bundle_storage, converting bundle packets into SanitizedBundles
+    /// Drains the unprocessed_bundle_storage, converting bundle packets into SanitizedBundles.
+    ///
+    /// Given constraints around the address lookup table, do not buffer these bundles across
+    /// slot boundaries.
     fn drain_and_sanitize_bundles(
         &mut self,
         bank: Arc<Bank>,
